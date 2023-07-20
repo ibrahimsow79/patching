@@ -1,0 +1,16 @@
+
+{
+    "ResourceTypeFilters": [
+        "AWS::AllSupported"
+      ],
+      "TagFilters": [
+        {
+            "Key": "app",
+            "Values": ["ctoweb","beautyplan","dunerivealautre","ultimateapp"]
+        },
+        {
+            "Key": "env" ,
+            "Values": ["prd"]
+        }
+      ]  
+}

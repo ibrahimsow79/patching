@@ -1,0 +1,15 @@
+{
+    "ResourceTypeFilters": [
+        "AWS::AllSupported"
+      ],
+      "TagFilters": [
+        {
+          "Key": "Patch Group" ,
+          "Values": ["non-prod"]
+        },
+        {
+            "Key": "project",
+            "Values": ["onev2amer1","onev2apac1","onev2eu1","ONE-BOCC"]
+        }
+      ]  
+}

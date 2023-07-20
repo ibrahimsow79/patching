@@ -1,0 +1,19 @@
+{
+  "ResourceTypeFilters": [
+      "AWS::AllSupported"
+    ],
+    "TagFilters": [
+      {
+        "Key": "env" ,
+        "Values": ["uat"]
+      },
+      {
+          "Key": "project",
+          "Values": ["onev2eu1"]
+      },
+      {
+        "Key": "app",
+        "Values": ["hybris-bocc"]
+      }
+    ]  
+}

@@ -1,0 +1,15 @@
+{
+    "ResourceTypeFilters": [
+        "AWS::AllSupported"
+      ],
+      "TagFilters": [
+        {
+          "Key": "env" ,
+          "Values": ["qat-1"]
+        },
+        {
+            "Key": "project",
+            "Values": ["onev2eu1"]
+        }
+      ]  
+}

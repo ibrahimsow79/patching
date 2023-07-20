@@ -1,0 +1,43 @@
+===============================================================================================================
+HOW TO USE THE MODULE BLOCK FOR THE CREATING AND IMPORTING THE AWS RESOURCEGROUPS
+===============================================================================================================
+
+
+#creating the module for the AWS "NAME OF THE RESOURCEGROUP WHICH YOU WOULD LIKE TO IMPORT OR CREATE" Resource group.
+
+module "RESOURCEGROUPNAME_AWS_RESOURCE_GROUP" {
+  source              = "./RESOURCE_GROUPS"
+  resource_group_name = "RESOURCEGROUPNAME"
+  query               = file("${path.module}/RESOURCE_GROUPS/json_query/RESOURCEGROUPNAME.json")
+}
+
+#QUERY
+RESOURCEGROUPNAME.json where this file consists of the fileter in order to fetch the aws resources whose satisfying the tag query condition
+
+#SAMPLE QUERY TEMPLATE
+{
+    "ResourceTypeFilters": [
+        "AWS::AllSupported"
+      ],
+      "TagFilters": [
+        {
+          "Key": "XXXXXX" ,
+          "Values": ["XXXXXX"]
+        },
+        {
+            "Key": "XXXXXX",
+            "Values": ["XXXXXX","XXXXXX","XXXXXX","XXXXXX"]
+        }
+      ]  
+}
+
+
+#IMPORTING THE EXISTING RESOURCES GROUPS INTO THE TERRAFORM
+
+Use the file "import.txt"
+    - <moduleName> <resource_group_name>
+    example: 
+        - APAC_ONE_OAT_AWS_RESOURCE_GROUP APAC-ONE-OAT
+
+#AFTER SUCCESSFULL ADDING THE ABOVE RUN THE SHELL SCRIPT
+    - bash ./import.sh < import.txt

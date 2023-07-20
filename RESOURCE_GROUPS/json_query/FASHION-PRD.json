@@ -1,0 +1,15 @@
+{
+    "ResourceTypeFilters": [
+        "AWS::AllSupported"
+      ],
+      "TagFilters": [
+        {
+          "Key": "project" ,
+          "Values": ["fashion"]
+        },
+        {
+            "Key": "Patch Group",
+            "Values": ["prod"]
+        } 
+      ]  
+}

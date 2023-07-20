@@ -1,0 +1,15 @@
+{
+    "ResourceTypeFilters": [
+        "AWS::AllSupported"
+      ],
+      "TagFilters": [
+        {
+            "Key": "env",
+            "Values": ["prd"]
+        },
+        {
+          "Key": "project" ,
+          "Values": ["eservices"]
+        } 
+      ]  
+}

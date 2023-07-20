@@ -1,0 +1,16 @@
+
+{
+    "ResourceTypeFilters": [
+        "AWS::AllSupported"
+      ],
+      "TagFilters": [
+        {
+          "Key": "env" ,
+          "Values": ["oat","oat-1","uat","uat-1","int"]
+        },
+        {
+            "Key": "app",
+            "Values": ["beautyplan","ctoweb","ultimateapp","dunerivealautre"]
+        }
+      ]  
+}
